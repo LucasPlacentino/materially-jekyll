@@ -1,15 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Assistant:400,700");
+
 :root {
     background-color: #1f1f1f;
+    --bg-clr-prmr-dark: #1f1f1f;
     color: #e3e3e3;
+    --fg-clr-prmr-dark: #e3e3e3;
+
+    --bg-clr-prmr-light: ghostwhite;
+    --fg-clr-prmr-light: #1f1f1f;
+
+    --bg-clr-scnd-dark: #2d2f31;
+    --fg-clr-scnd-dark: #e3e3e3;
+
+    --bg-clr-scnd-light: #e3e3e3;
+    --fg-clr-scnd-light: #1f1f1f;
+
+    --ff-title: "Assistant", sans-serif;
+    --ff-subtitle: "Assistant", sans-serif;
+    --ff-body: "Assistant", sans-serif;
 }
 
 body {
     margin: 0px;
+    font-family: var(--ff-body);
+}
+
+h1 {
+    font-family: var(--ff-title);
+
 }
 
 .header {
     background-color: #2d2f31;
+    background-color: var(--bg-clr-scnd-dark);
     color: #e3e3e3;
+    color: var(--fg-clr-scnd-dark);
     margin: 0px;
     padding: 1rem;
 }
@@ -18,7 +43,7 @@ body {
     display: inline;
     text-align: left;
     border: 1px solid cyan;
-
+    font-family: var(--ff-title);
 }
 
 .navbar {
@@ -27,15 +52,31 @@ body {
     border: 1px solid red
 }
 
+.title {
+    font-family: var(--ff-title);
+    margin: 2rem;
+    border: 1px solid purple;
+}
+
+.subtitle {
+    font-family: var(--ff-subtitle);
+    margin: 2rem;
+    border: 1px solid orange;
+}
+
 .content {
     background-color: #1f1f1f;
+    background-color: var(--bg-clr-prmr-dark);
     color: #e3e3e3;
+    color: var(--fg-clr-prmr-dark);
     padding: 1rem;
     border: 1px solid yellow;
 
     .item {
         background-color: #2d2f31;
+        background-color: var(--bg-clr-scnd-dark);
         color: #e3e3e3;
+        color: var(--fg-clr-scnd-dark);
         border-radius: 24px;
         padding: 1rem;
         border: 1px solid red;
@@ -44,12 +85,14 @@ body {
 
 .footer {
     color: #e3e3e3;
+    color: var(--fg-clr-prmr-dark);
     padding: 1rem;
     border: 1px solid blue;
 }
 
 .footer_content {
     color: #e3e3e3;
+    color: var(--fg-clr-prmr-dark);
     padding: 1rem;
     border: 1px solid green;
 }
@@ -57,9 +100,13 @@ body {
 @media (prefers-color-scheme: light) {
     :root {
         background-color: ghostwhite;
+        background-color: var(--bg-clr-prmr-light);
+        color: var(--fg-clr-prmr-light);
     }
 
     .content {
         background-color: ghostwhite;
+        background-color: var(--bg-clr-scnd-light);
+        color: var(--fg-clr-scnd-light);
     }
 }
